@@ -1,8 +1,0 @@
-# Redirecciones
-/   /index.html
-/productos   /productos.html
-/carrito   /carrito.html
-/checkout   /checkout.html
-
-# Redirección 404
-/*    /index.html   404
