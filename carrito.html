@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito - Moda Fusión</title>
+    
+    <!-- Fonts OFFLINE -->
+    <link rel="stylesheet" href="assets/fonts/css/all.min.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/carrito.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/img/icons/favicon.ico">
+</head>
+<body>
+    <!-- ===== HEADER ===== -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav__logo">
+                <span class="nav__logo-icon">✦</span>
+                Moda<span>Fusión</span>
+            </a>
+            
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="index.html" class="nav__link">Inicio</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="productos.html" class="nav__link">Productos</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="index.html#categorias" class="nav__link">Categorías</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="index.html#ofertas" class="nav__link">Ofertas</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="index.html#contacto" class="nav__link">Contacto</a>
+                    </li>
+                </ul>
+                
+                <div class="nav__close" id="nav-close">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+            
+            <div class="nav__actions">
+                <i class="fas fa-search nav__search" id="search-btn"></i>
+                <a href="#" class="nav__user">
+                    <i class="fas fa-user"></i>
+                </a>
+                <a href="carrito.html" class="nav__cart">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="nav__cart-badge">0</span>
+                </a>
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="search" id="search">
+            <div class="search__container container">
+                <i class="fas fa-search search__icon"></i>
+                <input type="text" class="search__input" placeholder="Buscar productos..." id="search-input">
+                <i class="fas fa-times search__close" id="search-close"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== BREADCRUMB ===== -->
+    <section class="breadcrumb">
+        <div class="container">
+            <div class="breadcrumb__container">
+                <a href="index.html">Inicio</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>Carrito</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CARRITO ===== -->
+    <section class="cart section">
+        <div class="container">
+            <!-- Título centrado -->
+            <div class="section__header">
+                <span class="section__subtitle">Tu Compra</span>
+                <h2 class="section__title">Carrito de <span>Compras</span></h2>
+            </div>
+            
+            <!-- Contenido del carrito centrado -->
+            <div class="cart__container" id="cart-container">
+                <!-- Carrito vacío -->
+                <div class="cart__empty" id="cart-empty">
+                    <i class="fas fa-shopping-bag"></i>
+                    <h3>Tu carrito está vacío</h3>
+                    <p>¡Explora nuestros productos y encuentra tu estilo!</p>
+                    <a href="productos.html" class="button button--primary">
+                        <i class="fas fa-arrow-left"></i> Seguir comprando
+                    </a>
+                </div>
+                
+                <!-- Carrito con productos -->
+                <div class="cart__content" id="cart-content" style="display:none;">
+                    <div class="cart__items" id="cart-items">
+                        <!-- Los items se cargan dinámicamente con JavaScript -->
+                    </div>
+                    
+                    <div class="cart__summary">
+                        <h3>Resumen del Pedido</h3>
+                        <div class="cart__summary-row">
+                            <span>Subtotal</span>
+                            <span id="cart-subtotal">€0.00</span>
+                        </div>
+                        <div class="cart__summary-row">
+                            <span>Envío</span>
+                            <span id="cart-shipping">€0.00</span>
+                        </div>
+                        <div class="cart__summary-row cart__summary-row--total">
+                            <span>Total</span>
+                            <span id="cart-total">€0.00</span>
+                        </div>
+                        <a href="checkout.html" class="button button--primary">
+                            Proceder al Pago <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="productos.html" class="button button--outline">
+                            <i class="fas fa-arrow-left"></i> Seguir comprando
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__container grid">
+                <div class="footer__brand">
+                    <a href="index.html" class="footer__logo">
+                        <span class="footer__logo-icon">✦</span>
+                        Moda<span>Fusión</span>
+                    </a>
+                    <p class="footer__description">
+                        Moda sostenible para quienes buscan autenticidad y calidad en cada prenda.
+                    </p>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="footer__social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="footer__social-link"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" class="footer__social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer__links">
+                    <h3>Enlaces</h3>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="productos.html">Productos</a></li>
+                        <li><a href="index.html#categorias">Categorías</a></li>
+                        <li><a href="index.html#ofertas">Ofertas</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__links">
+                    <h3>Ayuda</h3>
+                    <ul>
+                        <li><a href="#">Cómo comprar</a></li>
+                        <li><a href="#">Envíos</a></li>
+                        <li><a href="#">Devoluciones</a></li>
+                        <li><a href="#">Preguntas frecuentes</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__contact">
+                    <h3>Contacto</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Madrid, España</li>
+                        <li><i class="fas fa-envelope"></i> info@modafusion.com</li>
+                        <li><i class="fas fa-phone"></i> +34 900 123 456</li>
+                    </ul>
+                    <div class="footer__payment">
+                        <img src="assets/img/icons/visa.svg" alt="Visa" loading="lazy">
+                        <img src="assets/img/icons/mastercard.svg" alt="Mastercard" loading="lazy">
+                        <img src="assets/img/icons/paypal.svg" alt="PayPal" loading="lazy">
+                        <img src="assets/img/icons/bizum.svg" alt="Bizum" loading="lazy">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p class="footer__copy">
+                    © 2026 Moda Fusión. Todos los derechos reservados. 
+                    Desarrollado por <a href="https://facebook.com/FortiCodeDev" target="_blank">FortiCode Dev</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== SCROLL TO TOP ===== -->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script src="js/main.js"></script>
+    <script src="js/carrito.js"></script>
+</body>
+</html>

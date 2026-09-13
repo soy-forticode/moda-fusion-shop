@@ -1,0 +1,18 @@
+# Robots.txt para Moda Fusión
+User-agent: *
+Allow: /
+Disallow: /carrito.html
+Disallow: /checkout.html
+Disallow: /assets/
+Disallow: /css/
+Disallow: /js/
+Disallow: /vendors/
+
+# Sitemap
+Sitemap: https://modafusion.com/sitemap.xml
+
+# Crawl delay
+Crawl-delay: 1
+
+# Host
+Host: https://modafusion.com

@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Catálogo completo de Moda Fusión - Ropa, accesorios, calzado y más">
+    <title>Productos - Moda Fusión</title>
+    
+    <!-- Fonts OFFLINE -->
+    <link rel="stylesheet" href="assets/fonts/css/all.min.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/productos.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/img/icons/favicon.ico">
+</head>
+<body>
+    <!-- ===== HEADER ===== -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav__logo">
+                <span class="nav__logo-icon">✦</span>
+                Moda<span>Fusión</span>
+            </a>
+            
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="index.html" class="nav__link">Inicio</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="productos.html" class="nav__link active-link">Productos</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="index.html#categorias" class="nav__link">Categorías</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="index.html#ofertas" class="nav__link">Ofertas</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="index.html#contacto" class="nav__link">Contacto</a>
+                    </li>
+                </ul>
+                
+                <div class="nav__close" id="nav-close">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+            
+            <div class="nav__actions">
+                <i class="fas fa-search nav__search" id="search-btn"></i>
+                <a href="#" class="nav__user">
+                    <i class="fas fa-user"></i>
+                </a>
+                <a href="carrito.html" class="nav__cart">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="nav__cart-badge">0</span>
+                </a>
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="search" id="search">
+            <div class="search__container container">
+                <i class="fas fa-search search__icon"></i>
+                <input type="text" class="search__input" placeholder="Buscar productos..." id="search-input">
+                <i class="fas fa-times search__close" id="search-close"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== BREADCRUMB ===== -->
+    <section class="breadcrumb">
+        <div class="container">
+            <div class="breadcrumb__container">
+                <a href="index.html">Inicio</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>Productos</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CATÁLOGO ===== -->
+    <section class="products section">
+        <div class="container">
+            <div class="section__header">
+                <span class="section__subtitle">Catálogo</span>
+                <h2 class="section__title">Todos los <span>Productos</span></h2>
+                <p class="section__description">
+                    Encuentra lo que buscas en nuestra colección completa
+                </p>
+            </div>
+            
+            <!-- Filtros -->
+            <div class="products__filters">
+                <button class="products__filter active" data-filter="all">Todos</button>
+                <button class="products__filter" data-filter="ropa">Ropa</button>
+                <button class="products__filter" data-filter="accesorios">Accesorios</button>
+                <button class="products__filter" data-filter="calzado">Calzado</button>
+                <button class="products__filter" data-filter="gorros">Gorros & Sombreros</button>
+            </div>
+            
+            <!-- Grid de Productos -->
+            <div class="products__container grid" id="products-container">
+                <!-- ROPA -->
+                <div class="products__card" data-category="ropa" data-id="1">
+                    <div class="products__card-image">
+                        <img src="assets/img/productos/ropa/camisetas-basicas-colores.jpg" alt="Camisetas Básicas" loading="lazy">
+                        <div class="products__card-actions">
+                            <button class="products__action products__action--wishlist"><i class="far fa-heart"></i></button>
+                            <button class="products__action products__action--quickview"><i class="fas fa-eye"></i></button>
+                        </div>
+                        <div class="products__card-badge">Nuevo</div>
+                    </div>
+                    <div class="products__card-content">
+                        <span class="products__card-category">Ropa</span>
+                        <h3 class="products__card-title">Camisetas Básicas Colores</h3>
+                        <div class="products__card-colors">
+                            <span class="products__color active" style="background: #2D6A4F;"></span>
+                            <span class="products__color" style="background: #1B4332;"></span>
+                            <span class="products__color" style="background: #D8A47F;"></span>
+                        </div>
+                        <div class="products__card-footer">
+                            <span class="products__card-price">€39.99</span>
+                            <button class="products__card-cart" data-id="1">
+                                <i class="fas fa-shopping-bag"></i> Añadir
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="products__card" data-category="ropa" data-id="2">
+                    <div class="products__card-image">
+                        <img src="assets/img/productos/ropa/vestido-amarillo-fiesta.png" alt="Vestido Amarillo" loading="lazy">
+                        <div class="products__card-actions">
+                            <button class="products__action products__action--wishlist"><i class="far fa-heart"></i></button>
+                            <button class="products__action products__action--quickview"><i class="fas fa-eye"></i></button>
+                        </div>
+                        <div class="products__card-badge products__card-badge--sale">-20%</div>
+                    </div>
+                    <div class="products__card-content">
+                        <span class="products__card-category">Ropa</span>
+                        <h3 class="products__card-title">Vestido Amarillo Fiesta</h3>
+                        <div class="products__card-colors">
+                            <span class="products__color active" style="background: #E8D5B7;"></span>
+                            <span class="products__color" style="background: #C5A48A;"></span>
+                        </div>
+                        <div class="products__card-footer">
+                            <span class="products__card-price">
+                                <span class="price-old">€49.99</span> €39.99
+                            </span>
+                            <button class="products__card-cart" data-id="2">
+                                <i class="fas fa-shopping-bag"></i> Añadir
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="products__card" data-category="ropa" data-id="3">
+                    <div class="products__card-image">
+                        <img src="assets/img/productos/ropa/pantalon-chino-verde.jpg" alt="Pantalón Chino Verde" loading="lazy">
+                        <div class="products__card-actions">
+                            <button class="products__action products__action--wishlist"><i class="far fa-heart"></i></button>
+                            <button class="products__action products__action--quickview"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="products__card-content">
+                        <span class="products__card-category">Ropa</span>
+                        <h3 class="products__card-title">Pantalón Chino Verde</h3>
+                        <div class="products__card-colors">
+                            <span class="products__color active" style="background: #2D6A4F;"></span>
+                            <span class="products__color" style="background: #1B4332;"></span>
+                        </div>
+                        <div class="products__card-footer">
+                            <span class="products__card-price">€79.99</span>
+                            <button class="products__card-cart" data-id="3">
+                                <i class="fas fa-shopping-bag"></i> Añadir
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="products__card" data-category="ropa" data-id="4">
+                    <div class="products__card-image">
+                        <img src="assets/img/productos/ropa/traje-negro-formal.png" alt="Traje Negro Formal" loading="lazy">
+                        <div class="products__card-actions">
+                            <button class="products__action products__action--wishlist"><i class="far fa-heart"></i></button>
+                            <button class="products__action products__action--quickview"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="products__card-content">
+                        <span class="products__card-category">Ropa</span>
+                        <h3 class="products__card-title">Traje Negro Formal</h3>
+                        <div class="products__card-colors">
+                            <span class="products__color active" style="background: #1A1A1A;"></span>
+                            <span class="products__color" style="background: #2D2D2D;"></span>
+                        </div>
+                        <div class="products__card-footer">
+                            <span class="products__card-price">€149.99</span>
+                            <button class="products__card-cart" data-id="4">
+                                <i class="fas fa-shopping-bag"></i> Añadir
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="products__card" data-category="ropa" data-id="5">
+                    <div class="products__card-image">
+                        <img src="assets/img/productos/ropa/bikini-flores-rosa.png" alt="Bikini Flores Rosa" loading="lazy">
+                        <div class="products__card-actions">
+                            <button class="products__action products__action--wishlist"><i class="far fa-heart"></i></button>
+                            <button class="products__action products__action--quickview"><i class="fas fa-eye"></i></button>
+                        </div>
+                        <div class="products__card-badge">Nuevo</div>
+                    </div>
+                    <div class="products__card-content">
+                        <span class="products__card-category">Ropa</span>
+                        <h3 class="products__card-title">Bikini Flores Rosa</h3>
+                        <div class="products__card-colors">
+                            <span class="products__color active" style="background: #E8D5B7;"></span>
+                            <span class="products__color" style="background: #C5A48A;"></span>
+                        </div>
+                        <div class="products__card-footer">
+                            <span class="products__card-price">€29.99</span>
+                            <button class="products__card-cart" data-id="5">
+                                <i class="fas fa-shopping-bag"></i> Añadir
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="products__card" data-category="ropa" data-id="6">
+                    <div class="products__card-image">
+                        <img src="assets/img/productos/ropa/bikini-vino-lazos.jpg" alt="Bikini Vino Lazos" loading="lazy">
+                        <div class="products__card-actions">
+                            <button class="products__action products__action--wishlist"><i class="far fa-heart"></i></button>
+                            <button class="products__action products__action--quickview"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="products__card-content">
+                        <span class="products__card-category">Ropa</span>
+                        <h3 class="products__card-title">Bikini Vino Lazos</h3>
+                        <div class="products__card-colors">
+                            <span class="products__color active" style="background: #722F37;"></span>
+                            <span class="products__color" style="background: #4A1A1A;"></span>
+                        </div>
+                        <div class="products__card-footer">
+                            <span class="products__card-price">€34.99</span>
+                            <button class="products__card-cart" data-id="6">
+                                <i class="fas fa-shopping-bag"></i> Añadir
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="products__card" data-category="ropa" data-id="7">
+                    <div class="products__card-image">
+                        <img src="assets/img/productos/ropa/outfit-mujer-otonio.png" alt="Outfit Mujer Otoño" loading="lazy">
+                        <div class="products__card-actions">
+                            <button class="products__action products__action--wishlist"><i class="far fa-heart"></i></button>
+                            <button class="products__action products__action--quickview"><i class="fas fa-eye"></i></button>
+                        </div>
+                        <div class="products__card-badge products__card-badge--sale">-15%</div>
+                    </div>
+                    <div class="products__card-content">
+                        <span class="products__card-category">Ropa</span>
+                        <h3 class="products__card-title">Outfit Mujer Otoño</h3>
+                        <div class="products__card-colors">
+                            <span class="products__color active" style="background: #8B4513;"></span>
+                            <span class="products__color" style="background: #D2691E;"></span>
+                        </div>
+                        <div class="products__card-footer">
+                            <span class="products__card-price">
+                                <span class="price-old">€89.99</span> €76.49
+                            </span>
+                            <button class="products__card-cart" data-id="7">
+                                <i class="fas fa-shopping-bag"></i> Añadir
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ACCESORIOS -->
+                <div class="products__card" data-category="accesorios" data-id="8">
+                    <div class="products__card-image">
+                        <img src="assets/img/productos/accesorios/lentes-seguridad-negros.png" alt="Lentes Seguridad" loading="lazy">
+                        <div class="products__card-actions">
+                            <button class="products__action products__action--wishlist"><i class="far fa-heart"></i></button>
+                            <button class="products__action products__action--quickview"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="products__card-content">
+                        <span class="products__card-category">Accesorios</span>
+                        <h3 class="products__card-title">Lentes Seguridad Negros</h3>
+                        <div class="products__card-colors">
+                            <span class="products__color active" style="background: #1A1A1A;"></span>
+                        </div>
+                        <div class="products__card-footer">
+                            <span class="products__card-price">€19.99</span>
+                            <button class="products__card-cart" data-id="8">
+                                <i class="fas fa-shopping-bag"></i> Añadir
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="products__card" data-category="accesorios" data-id="9">
+                    <div class="products__card-image">
+                        <img src="assets/img/productos/accesorios/lentes-sol-transparentes.png" alt="Lentes Sol" loading="lazy">
+                        <div class="products__card-actions">
+                            <button class="products__action products__action--wishlist"><i class="far fa-heart"></i></button>
+                            <button class="products__action products__action--quickview"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="products__card-content">
+                        <span class="products__card-category">Accesorios</span>
+                        <h3 class="products__card-title">Lentes Sol Transparentes</h3>
+                        <div class="products__card-colors">
+                            <span class="products__color active" style="background: #C0C0C0;"></span>
+                        </div>
+                        <div class="products__card-footer">
+                            <span class="products__card-price">€24.99</span>
+                            <button class="products__card-cart" data-id="9">
+                                <i class="fas fa-shopping-bag"></i> Añadir
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="products__card" data-category="accesorios" data-id="10">
+                    <div class="products__card-image">
+                        <img src="assets/img/productos/accesorios/reloj-blanco-puntos.jpg" alt="Reloj Blanco" loading="lazy">
+                        <div class="products__card-actions">
+                            <button class="products__action products__action--wishlist"><i class="far fa-heart"></i></button>
+                            <button class="products__action products__action--quickview"><i class="fas fa-eye"></i></button>
+                        </div>
+                        <div class="products__card-badge">Nuevo</div>
+                    </div>
+                    <div class="products__card-content">
+                        <span class="products__card-category">Accesorios</span>
+                        <h3 class="products__card-title">Reloj Blanco Puntos</h3>
+                        <div class="products__card-colors">
+                            <span class="products__color active" style="background: #FFFFFF;"></span>
+                        </div>
+                        <div class="products__card-footer">
+                            <span class="products__card-price">€59.99</span>
+                            <button class="products__card-cart" data-id="10">
+                                <i class="fas fa-shopping-bag"></i> Añadir
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="products__card" data-category="accesorios" data-id="11">
+                    <div class="products__card-image">
+                        <img src="assets/img/productos/accesorios/reloj-negro-correa-gris.jpg" alt="Reloj Negro" loading="lazy">
+                        <div class="products__card-actions">
+                            <button class="products__action products__action--wishlist"><i class="far fa-heart"></i></button>
+                            <button class="products__action products__action--quickview"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="products__card-content">
+                        <span class="products__card-category">Accesorios</span>
+                        <h3 class="products__card-title">Reloj Negro Correa Gris</h3>
+                        <div class="products__card-colors">
+                            <span class="products__color active" style="background: #1A1A1A;"></span>
+                            <span class="products__color" style="background: #808080;"></span>
+                        </div>
+                        <div class="products__card-footer">
+                            <span class="products__card-price">€69.99</span>
+                            <button class="products__card-cart" data-id="11">
+                                <i class="fas fa-shopping-bag"></i> Añadir
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CALZADO -->
+                <div class="products__card" data-category="calzado" data-id="12">
+                    <div class="products__card-image">
+                        <img src="assets/img/productos/calzado/zapatilla-azul-verde.jpg" alt="Zapatilla Azul Verde" loading="lazy">
+                        <div class="products__card-actions">
+                            <button class="products__action products__action--wishlist"><i class="far fa-heart"></i></button>
+                            <button class="products__action products__action--quickview"><i class="fas fa-eye"></i></button>
+                        </div>
+                        <div class="products__card-badge">Nuevo</div>
+                    </div>
+                    <div class="products__card-content">
+                        <span class="products__card-category">Calzado</span>
+                        <h3 class="products__card-title">Zapatilla Azul Verde</h3>
+                        <div class="products__card-colors">
+                            <span class="products__color active" style="background: #2D6A4F;"></span>
+                            <span class="products__color" style="background: #1B4332;"></span>
+                        </div>
+                        <div class="products__card-footer">
+                            <span class="products__card-price">€89.99</span>
+                            <button class="products__card-cart" data-id="12">
+                                <i class="fas fa-shopping-bag"></i> Añadir
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="products__card" data-category="calzado" data-id="13">
+                    <div class="products__card-image">
+                        <img src="assets/img/productos/calzado/zapatilla-gris-rosa.png" alt="Zapatilla Gris Rosa" loading="lazy">
+                        <div class="products__card-actions">
+                            <button class="products__action products__action--wishlist"><i class="far fa-heart"></i></button>
+                            <button class="products__action products__action--quickview"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="products__card-content">
+                        <span class="products__card-category">Calzado</span>
+                        <h3 class="products__card-title">Zapatilla Gris Rosa</h3>
+                        <div class="products__card-colors">
+                            <span class="products__color active" style="background: #808080;"></span>
+                            <span class="products__color" style="background: #FFB6C1;"></span>
+                        </div>
+                        <div class="products__card-footer">
+                            <span class="products__card-price">€79.99</span>
+                            <button class="products__card-cart" data-id="13">
+                                <i class="fas fa-shopping-bag"></i> Añadir
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="products__card" data-category="calzado" data-id="14">
+                    <div class="products__card-image">
+                        <img src="assets/img/productos/calzado/zapatilla-running-blanca-negra.jpg" alt="Zapatilla Running" loading="lazy">
+                        <div class="products__card-actions">
+                            <button class="products__action products__action--wishlist"><i class="far fa-heart"></i></button>
+                            <button class="products__action products__action--quickview"><i class="fas fa-eye"></i></button>
+                        </div>
+                        <div class="products__card-badge products__card-badge--sale">-10%</div>
+                    </div>
+                    <div class="products__card-content">
+                        <span class="products__card-category">Calzado</span>
+                        <h3 class="products__card-title">Zapatilla Running Blanca Negra</h3>
+                        <div class="products__card-colors">
+                            <span class="products__color active" style="background: #FFFFFF;"></span>
+                            <span class="products__color" style="background: #1A1A1A;"></span>
+                        </div>
+                        <div class="products__card-footer">
+                            <span class="products__card-price">
+                                <span class="price-old">€99.99</span> €89.99
+                            </span>
+                            <button class="products__card-cart" data-id="14">
+                                <i class="fas fa-shopping-bag"></i> Añadir
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- GORROS Y SOMBREROS -->
+                <div class="products__card" data-category="gorros" data-id="15">
+                    <div class="products__card-image">
+                        <img src="assets/img/productos/gorros-y-sombreros/beanie-negro-liso.png" alt="Beanie Negro" loading="lazy">
+                        <div class="products__card-actions">
+                            <button class="products__action products__action--wishlist"><i class="far fa-heart"></i></button>
+                            <button class="products__action products__action--quickview"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="products__card-content">
+                        <span class="products__card-category">Gorros</span>
+                        <h3 class="products__card-title">Beanie Negro Liso</h3>
+                        <div class="products__card-colors">
+                            <span class="products__color active" style="background: #1A1A1A;"></span>
+                        </div>
+                        <div class="products__card-footer">
+                            <span class="products__card-price">€14.99</span>
+                            <button class="products__card-cart" data-id="15">
+                                <i class="fas fa-shopping-bag"></i> Añadir
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="products__card" data-category="gorros" data-id="16">
+                    <div class="products__card-image">
+                        <img src="assets/img/productos/gorros-y-sombreros/beanie-rojo-pompon.png" alt="Beanie Rojo" loading="lazy">
+                        <div class="products__card-actions">
+                            <button class="products__action products__action--wishlist"><i class="far fa-heart"></i></button>
+                            <button class="products__action products__action--quickview"><i class="fas fa-eye"></i></button>
+                        </div>
+                        <div class="products__card-badge">Nuevo</div>
+                    </div>
+                    <div class="products__card-content">
+                        <span class="products__card-category">Gorros</span>
+                        <h3 class="products__card-title">Beanie Rojo Pompón</h3>
+                        <div class="products__card-colors">
+                            <span class="products__color active" style="background: #CC0000;"></span>
+                        </div>
+                        <div class="products__card-footer">
+                            <span class="products__card-price">€16.99</span>
+                            <button class="products__card-cart" data-id="16">
+                                <i class="fas fa-shopping-bag"></i> Añadir
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="products__card" data-category="gorros" data-id="17">
+                    <div class="products__card-image">
+                        <img src="assets/img/productos/gorros-y-sombreros/gorra-negra-baseball.png" alt="Gorra Baseball" loading="lazy">
+                        <div class="products__card-actions">
+                            <button class="products__action products__action--wishlist"><i class="far fa-heart"></i></button>
+                            <button class="products__action products__action--quickview"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="products__card-content">
+                        <span class="products__card-category">Gorros</span>
+                        <h3 class="products__card-title">Gorra Negra Baseball</h3>
+                        <div class="products__card-colors">
+                            <span class="products__color active" style="background: #1A1A1A;"></span>
+                        </div>
+                        <div class="products__card-footer">
+                            <span class="products__card-price">€18.99</span>
+                            <button class="products__card-cart" data-id="17">
+                                <i class="fas fa-shopping-bag"></i> Añadir
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="products__card" data-category="gorros" data-id="18">
+                    <div class="products__card-image">
+                        <img src="assets/img/productos/gorros-y-sombreros/sombrero-paja-lazo-rosa.png" alt="Sombrero Paja" loading="lazy">
+                        <div class="products__card-actions">
+                            <button class="products__action products__action--wishlist"><i class="far fa-heart"></i></button>
+                            <button class="products__action products__action--quickview"><i class="fas fa-eye"></i></button>
+                        </div>
+                        <div class="products__card-badge products__card-badge--sale">-25%</div>
+                    </div>
+                    <div class="products__card-content">
+                        <span class="products__card-category">Gorros</span>
+                        <h3 class="products__card-title">Sombrero Paja Lazo Rosa</h3>
+                        <div class="products__card-colors">
+                            <span class="products__color active" style="background: #DEB887;"></span>
+                            <span class="products__color" style="background: #FFB6C1;"></span>
+                        </div>
+                        <div class="products__card-footer">
+                            <span class="products__card-price">
+                                <span class="price-old">€22.99</span> €17.24
+                            </span>
+                            <button class="products__card-cart" data-id="18">
+                                <i class="fas fa-shopping-bag"></i> Añadir
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__container grid">
+                <div class="footer__brand">
+                    <a href="index.html" class="footer__logo">
+                        <span class="footer__logo-icon">✦</span>
+                        Moda<span>Fusión</span>
+                    </a>
+                    <p class="footer__description">
+                        Moda sostenible para quienes buscan autenticidad y calidad en cada prenda.
+                    </p>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="footer__social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="footer__social-link"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" class="footer__social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer__links">
+                    <h3>Enlaces</h3>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="productos.html">Productos</a></li>
+                        <li><a href="index.html#categorias">Categorías</a></li>
+                        <li><a href="index.html#ofertas">Ofertas</a></li>
+                        <li><a href="index.html#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__links">
+                    <h3>Ayuda</h3>
+                    <ul>
+                        <li><a href="#">Cómo comprar</a></li>
+                        <li><a href="#">Envíos</a></li>
+                        <li><a href="#">Devoluciones</a></li>
+                        <li><a href="#">Preguntas frecuentes</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__contact">
+                    <h3>Contacto</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Madrid, España</li>
+                        <li><i class="fas fa-envelope"></i> info@modafusion.com</li>
+                        <li><i class="fas fa-phone"></i> +34 900 123 456</li>
+                    </ul>
+                    <div class="footer__payment">
+                        <img src="assets/img/icons/visa.svg" alt="Visa" loading="lazy">
+                        <img src="assets/img/icons/mastercard.svg" alt="Mastercard" loading="lazy">
+                        <img src="assets/img/icons/paypal.svg" alt="PayPal" loading="lazy">
+                        <img src="assets/img/icons/bizum.svg" alt="Bizum" loading="lazy">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p class="footer__copy">
+                    © 2026 Moda Fusión. Todos los derechos reservados. 
+                    Desarrollado por <a href="https://facebook.com/FortiCodeDev" target="_blank">FortiCode Dev</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== SCROLL TO TOP ===== -->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script src="js/main.js"></script>
+    <script src="js/productos.js"></script>
+    <script src="js/carrito.js"></script>
+</body>
+</html>

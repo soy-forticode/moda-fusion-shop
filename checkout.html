@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Moda Fusión</title>
+    
+    <!-- Fonts OFFLINE -->
+    <link rel="stylesheet" href="assets/fonts/css/all.min.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/carrito.css">
+    <link rel="stylesheet" href="css/checkout.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/img/icons/favicon.ico">
+</head>
+<body>
+    <!-- ===== HEADER ===== -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav__logo">
+                <span class="nav__logo-icon">✦</span>
+                Moda<span>Fusión</span>
+            </a>
+            
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="index.html" class="nav__link">Inicio</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="productos.html" class="nav__link">Productos</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="index.html#categorias" class="nav__link">Categorías</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="index.html#ofertas" class="nav__link">Ofertas</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="index.html#contacto" class="nav__link">Contacto</a>
+                    </li>
+                </ul>
+                
+                <div class="nav__close" id="nav-close">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+            
+            <div class="nav__actions">
+                <i class="fas fa-search nav__search" id="search-btn"></i>
+                <a href="#" class="nav__user">
+                    <i class="fas fa-user"></i>
+                </a>
+                <a href="carrito.html" class="nav__cart">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="nav__cart-badge">0</span>
+                </a>
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="search" id="search">
+            <div class="search__container container">
+                <i class="fas fa-search search__icon"></i>
+                <input type="text" class="search__input" placeholder="Buscar productos..." id="search-input">
+                <i class="fas fa-times search__close" id="search-close"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== BREADCRUMB ===== -->
+    <section class="breadcrumb">
+        <div class="container">
+            <div class="breadcrumb__container">
+                <a href="index.html">Inicio</a>
+                <i class="fas fa-chevron-right"></i>
+                <a href="carrito.html">Carrito</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>Checkout</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CHECKOUT ===== -->
+    <section class="checkout section">
+        <div class="container">
+            <div class="section__header">
+                <span class="section__subtitle">Finalizar Compra</span>
+                <h2 class="section__title">Datos de <span>Envío y Pago</span></h2>
+                <p class="section__description">Completa tus datos para finalizar el pedido</p>
+            </div>
+            
+            <div class="checkout__container">
+                <!-- Formulario -->
+                <div class="checkout__form">
+                    <form id="checkout-form">
+                        <h3>Información de Contacto</h3>
+                        
+                        <div class="checkout__field">
+                            <label for="checkout-name">Nombre completo *</label>
+                            <input type="text" id="checkout-name" required placeholder="Ej: Juan Pérez García">
+                        </div>
+                        
+                        <div class="checkout__group">
+                            <div class="checkout__field">
+                                <label for="checkout-email">Email *</label>
+                                <input type="email" id="checkout-email" required placeholder="tu@email.com">
+                            </div>
+                            <div class="checkout__field">
+                                <label for="checkout-phone">Teléfono *</label>
+                                <input type="tel" id="checkout-phone" required placeholder="+34 600 000 000">
+                            </div>
+                        </div>
+                        
+                        <h3 style="margin-top:2rem;">Dirección de Envío</h3>
+                        
+                        <div class="checkout__field">
+                            <label for="checkout-address">Dirección *</label>
+                            <input type="text" id="checkout-address" required placeholder="Calle, número, piso">
+                        </div>
+                        
+                        <div class="checkout__group">
+                            <div class="checkout__field">
+                                <label for="checkout-city">Ciudad *</label>
+                                <input type="text" id="checkout-city" required placeholder="Madrid">
+                            </div>
+                            <div class="checkout__field">
+                                <label for="checkout-zip">Código Postal *</label>
+                                <input type="text" id="checkout-zip" required placeholder="28001" maxlength="5">
+                            </div>
+                        </div>
+                        
+                        <div class="checkout__field">
+                            <label for="checkout-country">País *</label>
+                            <select id="checkout-country" required>
+                                <option value="ES" selected>España</option>
+                                <option value="PT">Portugal</option>
+                                <option value="FR">Francia</option>
+                                <option value="AD">Andorra</option>
+                            </select>
+                        </div>
+                        
+                        <h3 style="margin-top:2rem;">Método de Pago</h3>
+                        
+                        <div class="checkout__payment">
+                            <label class="checkout__payment-option">
+                                <input type="radio" name="payment" value="stripe" checked>
+                                <span>
+                                    <i class="fas fa-credit-card"></i>
+                                    Tarjeta
+                                </span>
+                            </label>
+                            <label class="checkout__payment-option">
+                                <input type="radio" name="payment" value="bizum">
+                                <span>
+                                    <i class="fas fa-mobile-alt"></i>
+                                    Bizum
+                                </span>
+                            </label>
+                            <label class="checkout__payment-option">
+                                <input type="radio" name="payment" value="paypal">
+                                <span>
+                                    <i class="fab fa-paypal"></i>
+                                    PayPal
+                                </span>
+                            </label>
+                        </div>
+                        
+                        <!-- Info de tarjeta (solo si elige tarjeta) -->
+                        <div class="checkout__card-info show" id="card-info">
+                            <div class="checkout__field">
+                                <label for="card-number">Número de tarjeta</label>
+                                <input type="text" id="card-number" placeholder="4242 4242 4242 4242" maxlength="19">
+                            </div>
+                            <div class="checkout__group">
+                                <div class="checkout__field">
+                                    <label for="card-expiry">Fecha exp.</label>
+                                    <input type="text" id="card-expiry" placeholder="MM/AA" maxlength="5">
+                                </div>
+                                <div class="checkout__field">
+                                    <label for="card-cvc">CVC</label>
+                                    <input type="text" id="card-cvc" placeholder="123" maxlength="4">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="checkout__terms">
+                            <label>
+                                <input type="checkbox" id="checkout-terms" required>
+                                Acepto los <a href="#">términos y condiciones</a> y la <a href="#">política de privacidad</a>
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="button button--primary" id="checkout-submit">
+                            <i class="fas fa-lock"></i>
+                            Pagar €<span id="checkout-total">0.00</span>
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Resumen -->
+                <div class="checkout__summary">
+                    <h3>Resumen del Pedido</h3>
+                    <div id="checkout-items">
+                        <!-- Items del carrito se cargan dinámicamente -->
+                    </div>
+                    <div class="checkout__summary-totals">
+                        <div class="checkout__summary-row">
+                            <span>Subtotal</span>
+                            <span id="checkout-subtotal">€0.00</span>
+                        </div>
+                        <div class="checkout__summary-row">
+                            <span>Envío</span>
+                            <span id="checkout-shipping">€0.00</span>
+                        </div>
+                        <div class="checkout__summary-row checkout__summary-row--total">
+                            <span>Total</span>
+                            <span id="checkout-total-summary">€0.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__container grid">
+                <div class="footer__brand">
+                    <a href="index.html" class="footer__logo">
+                        <span class="footer__logo-icon">✦</span>
+                        Moda<span>Fusión</span>
+                    </a>
+                    <p class="footer__description">
+                        Moda sostenible para quienes buscan autenticidad y calidad en cada prenda.
+                    </p>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="footer__social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="footer__social-link"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" class="footer__social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer__links">
+                    <h3>Enlaces</h3>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="productos.html">Productos</a></li>
+                        <li><a href="index.html#categorias">Categorías</a></li>
+                        <li><a href="index.html#ofertas">Ofertas</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__links">
+                    <h3>Ayuda</h3>
+                    <ul>
+                        <li><a href="#">Cómo comprar</a></li>
+                        <li><a href="#">Envíos</a></li>
+                        <li><a href="#">Devoluciones</a></li>
+                        <li><a href="#">Preguntas frecuentes</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__contact">
+                    <h3>Contacto</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Madrid, España</li>
+                        <li><i class="fas fa-envelope"></i> info@modafusion.com</li>
+                        <li><i class="fas fa-phone"></i> +34 900 123 456</li>
+                    </ul>
+                    <div class="footer__payment">
+                        <img src="assets/img/icons/visa.svg" alt="Visa" loading="lazy">
+                        <img src="assets/img/icons/mastercard.svg" alt="Mastercard" loading="lazy">
+                        <img src="assets/img/icons/paypal.svg" alt="PayPal" loading="lazy">
+                        <img src="assets/img/icons/bizum.svg" alt="Bizum" loading="lazy">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p class="footer__copy">
+                    © 2026 Moda Fusión. Todos los derechos reservados. 
+                    Desarrollado por <a href="https://facebook.com/FortiCodeDev" target="_blank">FortiCode Dev</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== SCROLL TO TOP ===== -->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script src="js/main.js"></script>
+    <script src="js/carrito.js"></script>
+    <script src="js/checkout.js"></script>
+</body>
+</html>
